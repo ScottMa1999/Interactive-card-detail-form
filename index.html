@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="styleSheet" href="/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <div class="container">
+
+    <!--background image setup-->
+    <article>
+      <img src="/images/bg-main-mobile.png" alt="bg-main-mobile">
+
+      <div class="back">
+        <img src="/images/bg-card-back.png" alt="card-back">
+        <p id="cvc">000</p>
+      </div>
+
+      <div class="front">
+        <img src="/images/bg-card-front.png" alt="card-front">
+        <h3 id="number">0000 0000 0000 0000</h3>
+        <div class="nameAndExpirationDate">
+          <p id="name">Jane Appleseed</p>
+          <p id="EMY">00/00</p>
+        </div>
+      </div>
+
+        <div class="circles">
+          <div></div>
+          <div></div>
+        </div>
+    </article>
+
+    <!--form section-->
+    <article>
+      <form>
+        <div class="holderName">
+          <label for="holderName">CardHolder Name</label><br>
+          <input id = "holderName" name="cn" type="text" placeholder="e.g. Jane Appleseed" oninput="getCardHolderName()" required>
+          <br>
+        </div>
+        
+        <div class="cardNumber">
+          <label for="CardNumber">Card Number</label><br>
+          <input type="text" id="CardNumber" name="cardnumber" placeholder="e.g. 1234 5678 9123 0000" oninput="getCardNumber()" required>
+          <br>
+        </div>
+
+        <div class="expirationAndCVC">
+          <div class="part1">
+            <label for="MY">EXP.DATE (MM/YY)</label><br>
+            <input type="text" id="EM" name="ExpirationMonth" placeholder="MM" oninput="getExpM()" required>
+            <input type="text" id="EY" name="ExpirationYear" placeholder="YY" oninput="getExpY()" required><br>
+          </div>
+
+          <div class="part2">
+            <label for="CVC">CVC</label><br>
+            <input type="text" id="CVC" name="SecurityCode" placeholder="e.g. 123" oninput="getCVC()" required><br>
+          </div>
+        </div>
+
+        <div class="confirmation-button" id="confirm-button">
+          <h3>Confirm</h3>
+        </div>
+      </form>
+    </article> 
+  </div>
+
+  <!--Complete Mobile Version Set up-->
+  <div class="container2 hidden">
+    <article class="background-images">
+
+      <img src="/images/bg-main-mobile.png" alt="bg-main-mobile">
+
+        <div class="back-image">
+          <img src="/images/bg-card-back.png" alt="back-image">
+          <p id="cvc">000</p>
+        </div>
+
+        <div class="front-image">
+          <img src="/images/bg-card-front.png" alt="card-front">
+          <h3 id="number">0000 0000 0000 0000</h3>
+          <div class="nameAndExpirationDate2">
+            <p id="name">Jane Appleseed</p>
+            <p id="EMY">00/00</p>
+          </div>
+          <div class="circles-2">
+            <div></div>
+            <div></div>
+          </div>
+        </div> 
+
+    </article>
+
+    <article>
+      <div class="components">
+        <img src="/images/icon-complete.svg" alt="complete-icon">
+        <h1>Thank you!</h1>
+        <h4>We've added your card details</h4>
+        <button class="confirmation-button-2" id="continue-button">Continue</button>
+      </div>
+    </article>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="/index.js"></script>
+</body>
+</html>
